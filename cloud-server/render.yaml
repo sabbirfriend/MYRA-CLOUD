@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: myra-cloud
+    runtime: docker
+    rootDir: cloud-server
+    healthCheckPath: /health
+    envVars:
+      - key: MYRA_GOOGLE_WEB_CLIENT_ID
+        sync: false
+      - key: MYRA_ADMIN_EMAIL
+        sync: false
+      - key: MYRA_DRIVE_ROOT_FOLDER_ID
+        sync: false
+      - key: MYRA_SESSION_SECRET
+        sync: false
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        sync: false
